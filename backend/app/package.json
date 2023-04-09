@@ -23,9 +23,14 @@
     "@nestjs/common": "^9.0.0",
     "@nestjs/core": "^9.0.0",
     "@nestjs/platform-express": "^9.0.0",
+    "@types/aws-lambda": "^8.10.114",
+    "@vendia/serverless-express": "^4.10.1",
+    "aws-lambda": "^1.0.7",
     "aws-serverless-express": "^3.4.0",
+    "offline": "^0.0.1",
     "reflect-metadata": "^0.1.13",
-    "rxjs": "^7.2.0"
+    "rxjs": "^7.2.0",
+    "serverless-offline": "^12.0.4"
   },
   "devDependencies": {
     "@nestjs/cli": "^9.0.0",

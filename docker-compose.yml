@@ -1,7 +1,7 @@
 version: "3.8"
 
 services:
-  backend:
+  localstack:
     container_name: "${LOCALSTACK_DOCKER_NAME-localstack_main}"
     image: localstack/localstack
     ports:
@@ -10,6 +10,9 @@ services:
     environment:
       - DEBUG=${DEBUG-}
       - DOCKER_HOST=unix:///var/run/docker.sock
+      - AWS_DEFAULT_REGION=ap-northeast-1
+      - AWS_ACCESS_KEY_ID=dummy
+      - AWS_SECRET_ACCESS_KEY=dummy
     volumes:
-      - "./backend/volume:/var/lib/localstack"
+      - "${LOCALSTACK_VOLUME_DIR:-./volume}:/var/lib/localstack"
       - "/var/run/docker.sock:/var/run/docker.sock"
